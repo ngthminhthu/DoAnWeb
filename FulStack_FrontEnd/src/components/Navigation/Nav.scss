@@ -1,0 +1,151 @@
+// body {
+//   margin: 0;
+//   font-family: Arial, Helvetica, sans-serif;
+// }
+
+// .topnav {
+//   overflow: hidden;
+//   background-color: #333;
+// }
+
+// .topnav a {
+//   float: left;
+//   color: #f2f2f2;
+//   text-align: center;
+//   padding: 14px 16px;
+//   text-decoration: none;
+//   font-size: 17px;
+// }
+
+// .topnav a:hover {
+//   background-color: #ddd;
+//   color: black;
+// }
+
+// .topnav a.active {
+//   background-color: #04aa6d;
+//   color: white;
+// }
+
+////
+///
+body {
+  margin: 0;
+  background-color: #e7e7e7 !important;
+}
+
+h2 {
+  margin: 0;
+}
+
+.full {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+.thanh {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: left;
+  -webkit-animation: open 1s ease-in-out forwards;
+  animation: open 1s ease-in-out forwards;
+}
+
+.full .thanh:nth-child(1) {
+  background: purple;
+  z-index: 2;
+}
+
+.full .thanh:nth-child(2) {
+  background: #03a9f4;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  z-index: 1;
+}
+
+@-webkit-keyframes open {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes open {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+.header {
+  width: auto;
+  height: 100px;
+  display: flex;
+  background-color: #ffffff;
+}
+.header .header_logo {
+  padding: 35px 313px 36px 135px;
+  box-sizing: border-box;
+}
+.header .header_logo img {
+  width: 55px;
+  height: 29px;
+}
+.header .header_links {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+}
+.header .header_links .header__link--home {
+  color: #112b3c;
+  border-bottom: 2px solid #e61c5d;
+}
+.header .header_links * {
+  color: #808080;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+}
+.header .js-login {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100px;
+  text-decoration: none;
+  color: #808080;
+  border: none;
+  margin-left: 100px;
+  background-color: #ffffff;
+}
+.header .header_button {
+  width: 140px;
+  height: 60px;
+  border-radius: 45px;
+  border: none;
+  background: #e61c5d;
+  color: #ffffff;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 135px;
+  cursor: pointer;
+}
+.header .header_button:hover {
+  background-color: #cf1651;
+  color: #e7e7e7;
+}
